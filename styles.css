@@ -1,11 +1,12 @@
-/* Aquí puedes agregar estilos adicionales según sea necesario */
+
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #AF9164;
   }
   
   header {
-    background-color: #f8f9fa;
+    background-color: #F7F3E3;
     padding: 20px 0;
   }
   
@@ -14,8 +15,36 @@ body {
   }
   
   footer {
-    background-color: #343a40;
+    background-color: #6F1A07;
     color: #fff;
     padding: 20px 0;
+    text-align: center;
   }
   
+  
+form {
+    border-radius: 2%;
+    background-color: #B3B6B7;
+    padding: 20px; 
+}
+
+.container{
+    border-radius: 2%;
+    background-color: #F7F3E3;
+}
+
+.collapse {
+    text-align: center;
+}
+
+/* Cambiar el color de los iconos del footer */
+footer .list-inline-item a {
+    color: #e7ebee; /* Cambia este valor al color deseado */
+}
+
+.logo{
+    width: 100px; 
+  height: auto;
+}
+
+
