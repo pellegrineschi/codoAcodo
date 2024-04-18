@@ -1,34 +1,21 @@
-body{
-    background-color: antiquewhite;
-    color: white
-}
+/* Aquí puedes agregar estilos adicionales según sea necesario */
 
-header{
-    background-color: green;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-main{
-    background: white;
-    color: black;
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #f8f9fa;
     padding: 20px 0;
-}
-
-aside{
-    background:gray;
-    padding: 60px 0;
-    color: blue;
-}
-
-.widgets{
- background: white;
- color: gray;
- margin-bottom: 20px;   
-}
-
-.widgets > div{
-    background: blue;
-    color: white;
-    padding: 20px;
-}
+  }
+  
+  main {
+    padding: 20px 0;
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+  }
+  

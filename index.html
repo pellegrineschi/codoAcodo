@@ -1,77 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Java Cafe</title>
-  </head>
-  <body>
-    <div class="container">
-        <header class="row">
-            <div class="col">
-                <h1>Java Cafe</h1>
-                <p>Ecommerce Coffe</p>
-            </div>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Ecommerce</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
 
-        </header>
-        <section class="contenedor-main row">
-          <main class="col-md-8">
-            
-            <div class="container">
-              <h1>Formulario de Contacto</h1>
-              <form>
-                  <div class="form-group">
-                      <label for="nombre">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
-                  </div>
-                  <div class="form-group">
-                      <label for="correo">Correo Electrónico</label>
-                      <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
-                  </div>
-                  <div class="form-group">
-                      <label for="asunto">Asunto</label>
-                      <input type="text" class="form-control" id="asunto" placeholder="Asunto">
-                  </div>
-                  <div class="form-group">
-                      <label for="mensaje">Mensaje</label>
-                      <textarea class="form-control" id="mensaje" rows="3"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Enviar</button>
-              </form>
-          </div>
-          </main>
-          <aside class="col-md-4">
-            <h3>ASIDE</h3>
-            <P>
-              Lorem ipsum dolor sit amet consectetur adipisicing 
-              elit. Minus a iste illum incidunt, consequatur accusamus 
-              ipsa assumenda! Quibusdam facilis inventore, magni quo iste 
-              perspiciatis vero voluptates necessitatibus sequi iure ex!
-            </P>
-          </aside>
-        </section>
-        
-        <section class="row widgets">
-          <div class="col-12 col-md-4 col-lg-3">
-            <p class="d-none d-lg-block">3 columnas</p>
-            <p class="d-none d-md-block d-lg-none">4 columas</p>
-            <p class="d-block d-md-none">12 columnas</p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Iure hic dolore animi inventore corrupti esse, sint facilis 
-              minus modi delectus? Reprehenderit quo eaque assumenda nemo 
-              fugiat doloremque facere magni magnam?
-            </p>
-          </div>
-        </section>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Tu Tienda</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Catálogo</a>
+        </li>
+      </ul>
     </div>
+  </nav>
+</header>
 
+<main class="container mt-4">
+  <h2>Formulario de Contacto</h2>
+  <form>
+    <div class="form-group">
+      <label for="nombre">Nombre:</label>
+      <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Ingrese su email">
+    </div>
+    <div class="form-group">
+      <label for="mensaje">Mensaje:</label>
+      <textarea class="form-control" id="mensaje" rows="3" placeholder="Escriba su mensaje"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</main>
 
+<footer class="mt-4">
+  <div class="container">
+    <p>&copy; 2024 Tu Tienda. Todos los derechos reservados.</p>
+  </div>
+</footer>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>
