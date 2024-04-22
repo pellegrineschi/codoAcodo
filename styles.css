@@ -1,13 +1,14 @@
 
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #AF9164;
-  }
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #D3C0A9, #AF9164);
+}
+
   
   header {
     background-color: #F7F3E3;
-    padding: 20px 0;
+    
   }
   
   main {
@@ -15,18 +16,19 @@ body {
   }
   
   footer {
-    background-color: #6F1A07;
+    background: linear-gradient(to right, #9F333C, #6F1A07);
     color: #fff;
     padding: 20px 0;
     text-align: center;
   }
   
   
-form {
+  form {
     border-radius: 2%;
-    background-color: #B3B6B7;
+    background: linear-gradient(to bottom, #E5E7E9, #B3B6B7);
     padding: 20px; 
 }
+
 
 .container{
     border-radius: 2%;
@@ -37,14 +39,33 @@ form {
     text-align: center;
 }
 
-/* Cambiar el color de los iconos del footer */
+
 footer .list-inline-item a {
-    color: #e7ebee; /* Cambia este valor al color deseado */
+    color: #e7ebee; 
 }
 
 .logo{
     width: 100px; 
   height: auto;
 }
+
+#headerContainer {
+  position: relative; 
+}
+
+#headerImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.navbar {
+  position: absolute;
+  top: 0; 
+  width: 100%; 
+}
+
+
+
 
 
