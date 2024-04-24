@@ -99,6 +99,15 @@ footer .list-inline-item a {
   background-color: #0056b3;
 }
 
+.cardProduct {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  margin: 10px;
+}
 
 
 
