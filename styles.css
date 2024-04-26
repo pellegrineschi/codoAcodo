@@ -36,9 +36,6 @@ body {
     background-color: #F7F3E3;
 }
 
-.collapse {
-    text-align: center;
-}
 
 
 footer .list-inline-item a {
@@ -60,11 +57,53 @@ footer .list-inline-item a {
   object-fit: cover;
 }
 
+
+/* barra de navegacion */
 .navbar {
   position: absolute;
   top: 0; 
   width: 100%; 
+  text-align: center;
 }
+
+.navbar nav ul.active {
+  display: flex; /* Mostrar la lista de enlaces */
+  flex-direction: column; /* Mostrar los enlaces en una columna */
+}
+
+.menu-toggle{
+  display: none;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff; 
+  margin-bottom: 5px; 
+}
+
+@media (max-width: 768px) {
+    .navbar nav ul {
+    display: none; 
+    flex-direction: column;
+    text-align: center; 
+  }
+
+  .navbar nav ul.active {
+    display: flex;
+    
+     
+  }
+
+  .menu-toggle{
+    display: block;
+  }
+  
+}
+
+
+/* tarjetas de los productos */
 
 .product-card{
   display: inline-block;
