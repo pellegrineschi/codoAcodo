@@ -1,5 +1,10 @@
 
-
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #D3C0A9, #AF9164);
@@ -62,13 +67,51 @@ footer .list-inline-item a {
 .navbar {
   position: absolute;
   top: 0; 
-  width: 100%; 
-  text-align: center;
+  width: 100%;   
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
 }
 
+nav ul li{
+  display: inline-block;
+  margin: 7px 5px;
+}
+
+nav ul li a{
+  font-size: 18px;
+  padding: 5 10px;
+  text-transform: uppercase;
+  color: black;
+  border-radius: 3px;
+  
+}
+
+li a.active, li a:hover{
+  background-color: blue;
+  transition: 0.5s;
+  padding: 0 3px;
+}
+
+.checkbtn{
+  font-size: 25px;
+  color: black;
+  float: right;
+  margin-right: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+
+
 .navbar nav ul.active {
-  display: flex; /* Mostrar la lista de enlaces */
-  flex-direction: column; /* Mostrar los enlaces en una columna */
+  display: flex; 
+  flex-direction: column; 
 }
 
 .menu-toggle{
@@ -84,21 +127,38 @@ footer .list-inline-item a {
 }
 
 @media (max-width: 768px) {
-    .navbar nav ul {
-    display: none; 
-    flex-direction: column;
-    text-align: center; 
-  }
-
-  .navbar nav ul.active {
-    display: flex;
+    .checkbtn{
+      display: block;
+    }
+    ul {
+      position: fixed;
+      width: 80%;
+      height: 100vh;
+      background: #AF9164;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
     
-     
-  }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
 
-  .menu-toggle{
-    display: block;
-  }
+    nav ul li a{
+      font-size: 20px;
+    }
+
+    li a:hover, li a.active{
+      background: none;
+      color: red;
+    }
+
+    #check:checked ~ ul{
+      left: 0;
+    }
   
 }
 
@@ -146,6 +206,19 @@ footer .list-inline-item a {
 
 .product-card {
   margin: 10px;
+}
+
+.redes{
+  text-align: right;
+  display: ruby-text;
+  list-style-type: none;
+  padding: 0px 10px;
+}
+
+.menu{
+  text-decoration: none;
+  color: black;
+  font-size: x-large;
 }
 
 
