@@ -1,111 +1,123 @@
-
-*{
+* {
   padding: 0;
   margin: 0;
   text-decoration: none;
   box-sizing: border-box;
-  
 }
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #D3C0A9, #AF9164);
+  background: linear-gradient(to bottom, #d3c0a9, #af9164);
 }
 
-  
-  header {
-    background-color: #F7F3E3;
-    
-  }
-  
-  main {
-    padding: 20px 0;
-  }
-  
-  footer {
-    background: linear-gradient(to right, #9F333C, #6F1A07);
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  
-  form {
-    border-radius: 2%;
-    background: linear-gradient(to bottom, #E5E7E9, #B3B6B7);
-    padding: 20px; 
+header {
+  background-color: #f7f3e3;
+}
+
+main {
+  padding: 20px 0;
+}
+
+footer {
+  background: linear-gradient(to right, #9f333c, #6f1a07);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+form {
+  border-radius: 2%;
+  background: linear-gradient(to bottom, #e5e7e9, #b3b6b7);
+  padding: 20px;
+}
+
+.container {
+  border-radius: 2%;
+  background-color: #f7f3e3;
+}
+
+/* footer */
+
+footer {
+  position: relative; 
+}
+
+.redes {
+  position: absolute; 
+  bottom: 10px; 
+  right: 10px; 
+  list-style-type: none;
+  display: flex; 
+  justify-content: space-between;
 }
 
 
-.container{
-  
-    border-radius: 2%;
-    background-color: #F7F3E3;
+.redes li {
+  margin-right: 10px; /* Añade un margen a la derecha de cada ícono */
+}
+
+.redes li:last-child {
+  margin-right: 0; /* Elimina el margen del último ícono para evitar espacio extra al final */
 }
 
 
 
 footer .list-inline-item a {
-    color: #e7ebee; 
+  color: #e7ebee;
 }
 
-.logo{
-    width: 100px; 
-  height: auto;
-}
+
+
 
 #headerContainer {
-  position: relative; 
+  position: relative;
 }
-
-@media (min-width: 700px) {
-  .imgBanner{
-    height: 200px;
-  }
-}
-
 
 #headerImg {
   width: 100%;
-  height: auto;
+  height: 245px;
   object-fit: cover;
 }
 
-
-
-
+@media (max-width: 750px) {
+  #headerImg {
+    height: auto;
+  }
+}
 
 /* barra de navegacion */
 .navbar {
   position: absolute;
-  top: 0; 
-  width: 100%;   
+  top: 0;
+  width: 100%;
 }
 nav ul {
   float: left;
   margin-right: 20px;
 }
 
-nav ul li{
+nav ul li {
   display: inline-block;
   margin: 7px 5px;
 }
 
-nav ul li a{
+nav ul li a {
   font-size: 18px;
   padding: 5 10px;
   text-transform: uppercase;
-  color: #ed870b;
+  color: #000000;
   border-radius: 3px;
-  
 }
 
-li a.active, li a:hover{
+/* barrra de navegacion responsive */
+
+li a.active,
+li a:hover {
   background-color: #d4ccacee;
   transition: 0.5s;
   padding: 0 3px;
 }
 
-.checkbtn{
+.checkbtn {
   font-size: 25px;
   color: black;
   float: right;
@@ -114,18 +126,16 @@ li a.active, li a:hover{
   display: none;
 }
 
-#check{
+#check {
   display: none;
 }
 
-
-
 .navbar nav ul.active {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
 }
 
-.menu-toggle{
+.menu-toggle {
   display: none;
 }
 
@@ -133,44 +143,45 @@ li a.active, li a:hover{
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #fff; 
-  margin-bottom: 5px; 
+  background-color: #fff;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
-    .checkbtn{
-      display: block;
-    }
-    ul {
-      position: fixed;
-      width: 80%;
-      height: 100vh;
-      background: #AF9164;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-    }
-    
-    nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    background: linear-gradient(to right, #af9164, rgba(211, 192, 169, 0.7));
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
 
-    nav ul li a{
-      font-size: 20px;
-    }
+  }
 
-    li a:hover, li a.active{
-      background: none;
-      color: red;
-    }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
 
-    #check:checked ~ ul{
-      left: 0;
-    }
-  
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  li a:hover,
+  li a.active {
+    background: none;
+    color: red;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
 
 /* formulario */
@@ -179,7 +190,7 @@ li a.active, li a:hover{
   width: 50%;
   margin: auto;
   padding: 20px;
-  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
 }
 
 .formulario {
@@ -207,64 +218,67 @@ li a.active, li a:hover{
   cursor: pointer;
 }
 
-
 /* tarjetas de los productos */
 
-.product-card{
-  display: inline-block;
-  border: 1px solid #ddd;
-  padding: 10px;
-  text-align: center;
-  max-width: 300px;
-  margin: auto;
+.card-container{
+  display: flex;
+  
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+
 }
 
-.product-card img {
-  max-width: 100%;
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
   height: auto;
 }
 
-.product-description {
+.card-body {
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* En pantallas pequeñas, cada tarjeta ocupa toda la columna */
+  }
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.card-text {
   font-size: 14px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.add-to-cart {
-  background-color: #007bff;
-  color: #fff;
+.btn-primary {
+  background-color: #4CAF50;
   border: none;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-}
-
-.add-to-cart :hover {
-  background-color: #0056b3;
-}
-
-.cardProduct {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.product-card {
-  margin: 10px;
-}
-
-.redes{
-  text-align: right;
-  display: ruby-text;
-  list-style-type: none;
-  padding: 0px 10px;
-}
-
-.menu{
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
   text-decoration: none;
-  color: black;
-  font-size: x-large;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
-
+.btn-primary:hover {
+  background-color: #45a049;
+}
 
