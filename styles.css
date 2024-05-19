@@ -13,9 +13,6 @@ header {
   background-color: #f7f3e3;
 }
 
-main {
-  padding: 20px 0;
-}
 
 footer {
   background: linear-gradient(to right, #9f333c, #6f1a07);
@@ -38,18 +35,17 @@ form {
 /* footer */
 
 footer {
-  position: relative; 
+  position: relative;
 }
 
 .redes {
-  position: absolute; 
-  bottom: 10px; 
-  right: 10px; 
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
   list-style-type: none;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
 }
-
 
 .redes li {
   margin-right: 10px; /* Añade un margen a la derecha de cada ícono */
@@ -59,14 +55,9 @@ footer {
   margin-right: 0; /* Elimina el margen del último ícono para evitar espacio extra al final */
 }
 
-
-
 footer .list-inline-item a {
   color: #e7ebee;
 }
-
-
-
 
 #headerContainer {
   position: relative;
@@ -160,7 +151,6 @@ li a:hover {
     left: -100%;
     text-align: center;
     transition: all 0.5s;
-
   }
 
   nav ul li {
@@ -220,14 +210,12 @@ li a:hover {
 
 /* tarjetas de los productos */
 
-.card-container{
+.card-container {
   display: flex;
-  
   gap: 20px;
   padding: 20px;
   justify-content: center;
   flex-wrap: wrap;
-
 }
 
 .card {
@@ -235,7 +223,7 @@ li a:hover {
   border: 1px solid #ddd;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card img {
@@ -265,7 +253,7 @@ li a:hover {
 }
 
 .btn-primary {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -282,15 +270,96 @@ li a:hover {
   background-color: #45a049;
 }
 
-
 /* validaciones de formulario */
 
-#nombreError,
-#emailError
-
-{
+.error {
   color: red;
   display: none;
 }
 
+.nosotros {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.nosotros img {
+  width: 350px;
+  height: 350px;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 728px) {
+  .nosotros {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.nosotros .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nosotros-right {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.nosotros-right img {
+  margin: 5px;
+  border-radius: 5px;
+  width: 350px;
+  height: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nosotros-right .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 728px) {
+  .nosotros-right {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.inicio-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.inicio-container .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio-container img{
+  width: 500px;
+  height: 500px;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+@media (max-width: 728px) {
+  .inicio-container {
+    flex-direction: column-reverse;
+  }
+}
 
