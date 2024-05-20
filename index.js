@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     // Verificar que los elementos del menú existen antes de agregar event listeners
     if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', function(event) {
+      menuToggle.('click', function(event) {
         event.stopPropagation();
         navLinks.classList.toggle('active');
         menuToggle.style.display = navLinks.classList.contains('active') ? 'none' : '';
