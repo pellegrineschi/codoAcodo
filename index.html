@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Metadatos y enlaces a hojas de estilo -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Java Cafe</title>
-
+    <!-- Enlace a la hoja de estilo principal -->
     <link href="styles.css" rel="stylesheet" />
+    <!-- Enlace a los iconos de Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
       rel="stylesheet"
     />
   </head>
   <body>
+    <!-- Cabecera del sitio -->
     <header>
+      <!-- Imagen del banner -->
       <img
         class="imgBanner"
         id="headerImg"
         src="./imagenes/baner.png"
         alt="baner"
       />
-
+      <!-- Barra de navegación -->
       <div class="navbar">
         <nav>
+          <!-- Checkbox para el menú desplegable en dispositivos móviles -->
           <input type="checkbox" id="check" />
+          <!-- Icono del menú desplegable -->
           <label for="check" class="checkbtn">
             <i class="bi bi-list"></i>
           </label>
+          <!-- Lista de enlaces de navegación -->
           <ul>
             <li><a href="inicio.html">Inicio</a></li>
             <li><a href="nosotros.html">Nosotros</a></li>
             <li><a href="catalogo1.html">Catálogo</a></li>
             <li><a href="index.html" class="active">Contacto</a></li>
             <li>
+              <!-- Icono del carrito de compras -->
               <a href="#"><i class="bi bi-cart3"></i></a>
             </li>
           </ul>
@@ -39,9 +47,12 @@
       </div>
     </header>
 
+    <!-- Contenido principal del sitio -->
     <main class="container">
       <h2 class="formulario">Formulario de Contacto</h2>
+      <!-- Formulario de contacto -->
       <form id="contactForm">
+        <!-- Campo de nombre -->
         <div class="form-group">
           <label for="nombre">Nombre:</label>
           <input
@@ -51,13 +62,10 @@
             placeholder="Ingrese su nombre"
             required
           />
-          <small
-            id="nombreError"
-            class="error"
-            
-            >Nombre no válido</small
-          >
+          <!-- Mensaje de error para el nombre -->
+          <small id="nombreError" class="error">Nombre no válido</small>
         </div>
+        <!-- Campo de email -->
         <div class="form-group">
           <label for="email">Email:</label>
           <input
@@ -67,11 +75,10 @@
             placeholder="Ingrese su email"
             required
           />
-          <small id="emailError"
-                 class="error" 
-            >Email no válido</small
-          >
+          <!-- Mensaje de error para el email -->
+          <small id="emailError" class="error">Email no válido</small>
         </div>
+        <!-- Campo de teléfono -->
         <div class="form-group">
           <label for="telefono">Teléfono:</label>
           <input
@@ -81,13 +88,10 @@
             placeholder="Ingrese su teléfono"
             required
           />
-          <small
-            id="telefonoError"
-            class="error"
-            
-            >Teléfono no válido</small
-          >
+          <!-- Mensaje de error para el teléfono -->
+          <small id="telefonoError" class="error">Teléfono no válido</small>
         </div>
+        <!-- Campo de mensaje -->
         <div class="form-group">
           <label for="mensaje">Mensaje:</label>
           <textarea
@@ -97,17 +101,15 @@
             placeholder="Escriba su mensaje"
             required
           ></textarea>
-          <small
-            id="mensajeError"
-            class="error"
-            
-            >Mensaje no válido</small
-          >
+          <!-- Mensaje de error para el mensaje -->
+          <small id="mensajeError" class="error">Mensaje no válido</small>
         </div>
+        <!-- Botón para enviar el formulario -->
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
     </main>
 
+<<<<<<< HEAD
     <footer>   <!--</footer> class="mt-4"> -->
       <div class="container-footer">
         <div>
@@ -129,9 +131,34 @@
             </li>
           </ul>
         </div>
+=======
+    <!-- Pie de página del sitio -->
+    <footer>
+      <div>
+        <!-- Información de derechos de autor -->
+        <p>&copy; 2024 Java Cafe. Cristian - Lucas - Matias.</p>
+      </div>
+      <div>
+        <!-- Lista de enlaces a redes sociales -->
+        <ul class="redes">
+          <li class="list-inline-item">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#"><i class="bi bi-twitter"></i></a>
+          </li>
+        </ul>
+>>>>>>> 521f45469e25c4523a3d42f3fe47ad03d5c8574e
       </div>
     </footer>
 
+    <!-- Enlace al archivo JavaScript -->
     <script src="./index.js"></script>
   </body>
 </html>
