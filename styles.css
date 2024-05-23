@@ -4,6 +4,72 @@
   text-decoration: none;
   box-sizing: border-box;
 }
+/* loader aca usamos una imagen creada con css y despues un poco de javascript para luego cambiar la clase a hidden y por ultimo removerla */
+
+@keyframes wave {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+}
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffefdb;
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+.cup {
+  position: relative;
+  width: 220px;
+  height: 180px;
+  border: 8px solid #ffefdb;
+  box-shadow: 0 0 0 12px #352a22;
+  border-radius: 10px 10px 60px 75px;
+  background: url(./imagenes/coffee.png);
+  background-repeat: repeat-x;
+  background-position: 0 130px;
+  animation: filling 4s infinite;
+}
+
+@keyframes filling {
+  0%,
+  100% {
+    background-position: 0 130px;
+  }
+  50% {
+    background-position: 600px -70px;
+  }
+}
+
+.cup .cup-handle {
+  position: absolute;
+  top: 10px;
+  right: -75px;
+  width: 65px;
+  height: 65px;
+  border: 8px solid #352a22;
+  border-radius: 20px 10px 50px 20px;
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #d3c0a9, #af9164);
@@ -16,13 +82,13 @@ header {
   background-color: #f7f3e3;
 }
 
-
 footer {
   background: linear-gradient(to right, #9f333c, #6f1a07);
   color: #fff;
   padding: 20px 0;
   text-align: center;
   margin-top: auto;
+  display: none;
 }
 
 form {
@@ -39,12 +105,12 @@ form {
 /* footer */
 
 .redes {
-  position: relative; 
+  position: relative;
   bottom: 10px;
   right: 10px;
   list-style-type: none;
   display: flex;
-  justify-content:right;
+  justify-content: right;
 }
 
 .redes li {
@@ -80,6 +146,7 @@ footer .list-inline-item a {
   position: absolute;
   top: 0;
   width: 100%;
+  display: none;
 }
 nav ul {
   float: left;
@@ -348,13 +415,12 @@ li a:hover {
   align-items: center;
 }
 
-.inicio-container img{
+.inicio-container img {
   width: 500px;
   height: 500px;
   border-radius: 5px;
   margin: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 @media (max-width: 728px) {
@@ -362,4 +428,3 @@ li a:hover {
     flex-direction: column-reverse;
   }
 }
-

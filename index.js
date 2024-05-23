@@ -1,5 +1,12 @@
 // Esperar a que el DOM se cargue completamente antes de ejecutar el script
 document.addEventListener("DOMContentLoaded", () => {
+  // Loader - El setTimeOut espera dos segundos y realiza los cambios para que desaparezca el loader
+  setTimeout(() => {
+    document.querySelector(".loader").classList.add("loader--hidden");
+    // document.querySelector(".loader").style.display = "none";
+    document.querySelector(".navbar").style.display = "flex";
+    document.querySelector("footer").style.display = "flex";
+  }, 2000);
   // Obtener referencias a los elementos del formulario y los mensajes de error
   const formulario = document.getElementById("contactForm");
   const campoNombre = document.getElementById("nombre");
@@ -10,104 +17,131 @@ document.addEventListener("DOMContentLoaded", () => {
   const errorTelefono = document.getElementById("telefonoError");
   const campoMensaje = document.getElementById("mensaje");
   const errorMensaje = document.getElementById("mensajeError");
-  
-<<<<<<< HEAD
-    // Verificar que los elementos del menú existen antes de agregar event listeners
-    if (menuToggle && navLinks) {
-      menuToggle.('click', function(event) {
-        event.stopPropagation();
-        navLinks.classList.toggle('active');
-        menuToggle.style.display = navLinks.classList.contains('active') ? 'none' : '';
-      });
-  
-      document.addEventListener('click', function(event) {
-        if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-          navLinks.classList.remove('active');
-          menuToggle.style.display = '';
-        }
-      });
-    }
-  
-    // Verificar que los elementos del formulario existen antes de agregar event listeners
-    if (formulario && campoNombre && errorNombre && campoEmail && errorEmail && campoTelefono && errorTelefono && campoMensaje && errorMensaje) {
-      formulario.addEventListener("submit", (event) => {
-        event.preventDefault();
-  
-        // Validar campos
-        const nombreValor = campoNombre.value.trim();
-        const emailValor = campoEmail.value.trim();
-        const telefonoValor = campoTelefono.value.trim();
-        const mensajeValor = campoMensaje.value.trim();
-        
-        const nombreValido = validarNombre(nombreValor);
-        const emailValido = validarEmail(emailValor);
-        const telefonoValido = validarTelefono(telefonoValor);
-        const mensajeValido = validarMensaje(mensajeValor);
-  
-        let formularioValido = true;
-  
-        if (!nombreValido) {
-          errorNombre.style.display = "block";
-          formularioValido = false;
-        } else {
-          errorNombre.style.display = "none";
-        }
-  
-        if (!emailValido) {
-          errorEmail.style.display = "block";
-          formularioValido = false;
-        } else {
-          errorEmail.style.display = "none";
-        }
-  
-        if (!telefonoValido) {
-          errorTelefono.style.display = "block";
-          formularioValido = false;
-        } else {
-          errorTelefono.style.display = "none";
-        }
-  
-        if (!mensajeValido) {
-          errorMensaje.style.display = "block";
-          formularioValido = false;
-        } else {
-          errorMensaje.style.display = "none";
-        }
-  
-        if (formularioValido) {
-          alert("Formulario enviado correctamente");
-        }
-      });
-    }
-  });
-  
-  function validarNombre(nombre) {
-    const regex = /^[a-zA-Z\s]+$/;
-    return regex.test(nombre);
-=======
-  // Obtener referencias a los elementos del menú de navegación
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.navbar nav ul');
 
   // Verificar que los elementos del menú existen antes de agregar event listeners
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function(event) {
+    menuToggle("click", function (event) {
       event.stopPropagation();
-      navLinks.classList.toggle('active');
-      menuToggle.style.display = navLinks.classList.contains('active') ? 'none' : '';
+      navLinks.classList.toggle("active");
+      menuToggle.style.display = navLinks.classList.contains("active")
+        ? "none"
+        : "";
     });
 
-    document.addEventListener('click', function(event) {
-      if (!navLinks.contains(event.target) && !menuToggle.contains(event.target)) {
-        navLinks.classList.remove('active');
-        menuToggle.style.display = '';
+    document.addEventListener("click", function (event) {
+      if (
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        navLinks.classList.remove("active");
+        menuToggle.style.display = "";
       }
     });
->>>>>>> 521f45469e25c4523a3d42f3fe47ad03d5c8574e
   }
 
   // Verificar que los elementos del formulario existen antes de agregar event listeners
-  if (formulario && campoNombre && errorNombre && campoEmail && errorEmail && campoTelefono && errorTelefono && campoMensaje && errorMensaje) {
+  if (
+    formulario &&
+    campoNombre &&
+    errorNombre &&
+    campoEmail &&
+    errorEmail &&
+    campoTelefono &&
+    errorTelefono &&
+    campoMensaje &&
+    errorMensaje
+  ) {
+    formulario.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      // Validar campos
+      const nombreValor = campoNombre.value.trim();
+      const emailValor = campoEmail.value.trim();
+      const telefonoValor = campoTelefono.value.trim();
+      const mensajeValor = campoMensaje.value.trim();
+
+      const nombreValido = validarNombre(nombreValor);
+      const emailValido = validarEmail(emailValor);
+      const telefonoValido = validarTelefono(telefonoValor);
+      const mensajeValido = validarMensaje(mensajeValor);
+
+      let formularioValido = true;
+
+      if (!nombreValido) {
+        errorNombre.style.display = "block";
+        formularioValido = false;
+      } else {
+        errorNombre.style.display = "none";
+      }
+
+      if (!emailValido) {
+        errorEmail.style.display = "block";
+        formularioValido = false;
+      } else {
+        errorEmail.style.display = "none";
+      }
+
+      if (!telefonoValido) {
+        errorTelefono.style.display = "block";
+        formularioValido = false;
+      } else {
+        errorTelefono.style.display = "none";
+      }
+
+      if (!mensajeValido) {
+        errorMensaje.style.display = "block";
+        formularioValido = false;
+      } else {
+        errorMensaje.style.display = "none";
+      }
+
+      if (formularioValido) {
+        alert("Formulario enviado correctamente");
+      }
+    });
+  }
+});
+
+function validarNombre(nombre) {
+  const regex = /^[a-zA-Z\s]+$/;
+  return regex.test(nombre);
+  // Obtener referencias a los elementos del menú de navegación
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".navbar nav ul");
+
+  // Verificar que los elementos del menú existen antes de agregar event listeners
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function (event) {
+      event.stopPropagation();
+      navLinks.classList.toggle("active");
+      menuToggle.style.display = navLinks.classList.contains("active")
+        ? "none"
+        : "";
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        !navLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        navLinks.classList.remove("active");
+        menuToggle.style.display = "";
+      }
+    });
+  }
+
+  // Verificar que los elementos del formulario existen antes de agregar event listeners
+  if (
+    formulario &&
+    campoNombre &&
+    errorNombre &&
+    campoEmail &&
+    errorEmail &&
+    campoTelefono &&
+    errorTelefono &&
+    campoMensaje &&
+    errorMensaje
+  ) {
     formulario.addEventListener("submit", (event) => {
       event.preventDefault(); // Evitar el envío del formulario
 
@@ -116,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const emailValor = campoEmail.value.trim();
       const telefonoValor = campoTelefono.value.trim();
       const mensajeValor = campoMensaje.value.trim();
-      
+
       const nombreValido = validarNombre(nombreValor);
       const emailValido = validarEmail(emailValor);
       const telefonoValido = validarTelefono(telefonoValor);
@@ -159,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
+}
 
 // Función para validar el nombre usando una expresión regular
 function validarNombre(nombre) {
