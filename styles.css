@@ -100,7 +100,7 @@ form {
 footer {
   background: linear-gradient(to right, #9f333c, #6f1a07);
   color: #fff;
-  padding: 20px 0;
+  padding: 20px 20px;
   text-align: center;
   margin-top: auto;
   display: none;
@@ -121,7 +121,9 @@ footer {
 .footer-social {
   display: flex;
   justify-content: center;
+ 
 }
+
 
 .footer-social ul {
   list-style: none;
@@ -132,7 +134,7 @@ footer {
 }
 
 .footer-social li {
-  margin: 0 10px;
+  margin-left: 10px;
 }
 
 .footer-social a {
